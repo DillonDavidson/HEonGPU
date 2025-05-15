@@ -7,6 +7,7 @@
 #define HEONGPU_SCHEMES_H
 
 #include "defines.h"
+#include <cstdint>
 
 namespace heongpu
 {
@@ -53,7 +54,7 @@ namespace heongpu
     template <Scheme S> class Secretkey;
 
     // Describes the type of encryption scheme to be used.
-    enum class scheme_type : std::uint8_t
+    enum class scheme_type : uint8_t
     {
         // No scheme set; cannot be used for encryption
         none = 0x0,
@@ -68,7 +69,7 @@ namespace heongpu
         bgv = 0x3
     };
 
-    enum class sec_level_type : std::uint8_t
+    enum class sec_level_type : uint8_t
     {
         // No security level specified.
         none = 0x0,
@@ -86,7 +87,7 @@ namespace heongpu
         sec256 = 0x3
     };
 
-    enum class keyswitching_type : std::uint8_t
+    enum class keyswitching_type : uint8_t
     {
         NONE = 0x0,
         KEYSWITCHING_METHOD_I = 0x1, // SEALMETHOD = 0x1,
@@ -94,7 +95,7 @@ namespace heongpu
         KEYSWITCHING_METHOD_III = 0x3, // EXTERNALPRODUCT_2 = 0x3
     };
 
-    enum class logic_bootstrapping_type : std::uint8_t
+    enum class logic_bootstrapping_type : uint8_t
     {
         NONE = 0x0,
         BIT_BOOTSTRAPPING = 0x1, // scale = q0 / 2. More detail:

@@ -15,6 +15,7 @@
 #include <string>
 #include <stdexcept>
 #include <zlib.h>
+#include <cstdint>
 
 namespace heongpu
 {

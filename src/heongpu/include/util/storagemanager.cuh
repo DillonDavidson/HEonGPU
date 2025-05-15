@@ -10,6 +10,7 @@
 #include "nttparameters.cuh"
 #include <stdexcept>
 #include <vector>
+#include <cstdint>
 
 namespace heongpu
 {
@@ -20,7 +21,7 @@ namespace heongpu
      * - `HOST`: Indicates that the object is stored in the host memory.
      * - `DEVICE`: Indicates that the object is stored in the device memory.
      */
-    enum class storage_type : std::uint8_t
+    enum class storage_type : uint8_t
     {
         HOST = 0x1, // Host memory storage
         DEVICE = 0x2 // Device memory storage

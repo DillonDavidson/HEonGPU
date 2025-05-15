@@ -9,6 +9,16 @@ The goal of HEonGPU is to provide:
 
 For more information about HEonGPU: https://eprint.iacr.org/2024/1543
 
+To compile run ./compile.sh or the following:
+```bash
+cmake -S . -B build \
+  -DCMAKE_C_COMPILER=gcc-13 \
+  -DCMAKE_CXX_COMPILER=g++-13 \
+  -DCMAKE_CUDA_HOST_COMPILER=/usr/bin/g++-13 \
+ -DCMAKE_CUDA_ARCHITECTURES=86
+cmake --build build
+```
+
 ### Current HEonGPU Capabilities and Schemes
 
 <div align="center">
