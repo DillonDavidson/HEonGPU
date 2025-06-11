@@ -27,14 +27,13 @@
 
 // Max power of galois key capability, e.g., if MAX_SHIFT is 8, rotation
 // capability range is between 0 and 255(2^(8 - 1))
-#define MAX_SHIFT 8
+#define MAX_SHIFT 12
 
 // Memorypool sizes
-constexpr static float initial_device_memorypool_size =
-    0.5f; // %50 of GPU memory
-constexpr static float max_device_memorypool_size = 0.8f; // %80 of GPU memory
+constexpr static float initial_device_memorypool_size = 0.5f;
+constexpr static float max_device_memorypool_size = 0.9f;
 
-constexpr static float initial_host_memorypool_size = 0.1f; // %10 of CPU memory
-constexpr static float max_host_memorypool_size = 0.2f; // %20 of CPU memory
+constexpr static float initial_host_memorypool_size = 0.5f;
+constexpr static float max_host_memorypool_size = 0.9f;
 
 #endif // HEONGPU_DEFINES_H
