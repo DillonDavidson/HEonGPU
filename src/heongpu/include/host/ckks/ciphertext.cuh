@@ -190,6 +190,11 @@ namespace heongpu
             return relinearization_required_;
         }
 
+        inline bool is_generated() const noexcept
+        {
+            return ciphertext_generated_;
+        }
+
         Ciphertext() = default;
 
         Ciphertext(const Ciphertext& copy)
