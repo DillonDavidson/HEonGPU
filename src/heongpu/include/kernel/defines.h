@@ -30,10 +30,10 @@
 #define MAX_SHIFT 8
 
 // Memorypool sizes
-constexpr static float initial_device_memorypool_size = 0.6f; // 60% of GPU memory
-constexpr static float max_device_memorypool_size = 0.9f; // 90% of GPU memory
+constexpr static float initial_device_memorypool_size = 0.9f;
+constexpr static float max_device_memorypool_size = 0.99f;
 
-constexpr static float initial_host_memorypool_size = 0.6f; // 60% of CPU memory
-constexpr static float max_host_memorypool_size = 0.9f; // 90% of CPU memory
+constexpr static float initial_host_memorypool_size = 0.9f;
+constexpr static float max_host_memorypool_size = 0.99f;
 
 #endif // HEONGPU_DEFINES_H
