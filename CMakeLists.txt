@@ -34,9 +34,7 @@ find_package(OpenMP REQUIRED)
 find_package(ZLIB REQUIRED)
 find_package(OpenSSL REQUIRED)
 
-if(NOT DEFINED CMAKE_CUDA_ARCHITECTURES)
-    set(CMAKE_CUDA_ARCHITECTURES 75)
-endif()
+set(CMAKE_CUDA_ARCHITECTURES 86)
 message(STATUS "Setting CMAKE_CUDA_ARCHITECTURES to ${CMAKE_CUDA_ARCHITECTURES} for HEonGPU")
 
 ##################
@@ -80,34 +78,7 @@ set(RNGonGPU_USE_INTERNAL_GPUNTT
 
 add_subdirectory(thirdparty)
 add_subdirectory(src)
-
-#########
-# Tests #
-#########
-
-option(HEonGPU_BUILD_TESTS "Build HEonGPU Tests" OFF)
-message(STATUS "HEonGPU_BUILD_TESTS: ${HEonGPU_BUILD_TESTS}")
-if(HEonGPU_BUILD_TESTS)
-    enable_testing()
-    add_subdirectory(test)
-endif()
-
-############
-# Examples #
-############
-
-option(HEonGPU_BUILD_EXAMPLES "Build HEonGPU Examples" OFF)
-message(STATUS "HEonGPU_BUILD_EXAMPLES: ${HEonGPU_BUILD_EXAMPLES}")
-if(HEonGPU_BUILD_EXAMPLES)
-    add_subdirectory(example)
-endif()
-
-##############
-# BENCHMARKS #
-##############
-
-option(HEonGPU_BUILD_BENCHMARKS "Build HEonGPU Benchmarks" OFF)
-message(STATUS "HEonGPU_BUILD_BENCHMARKS: ${HEonGPU_BUILD_BENCHMARKS}")
-if(HEonGPU_BUILD_BENCHMARKS)
-    add_subdirectory(benchmark)
-endif()
+enable_testing()
+add_subdirectory(test)
+add_subdirectory(example)
+add_subdirectory(benchmark)
